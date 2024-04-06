@@ -320,7 +320,6 @@ public:
         m_tail += cnt;
     }
 
-private:
     tracy_force_inline unsigned int NextQueryId()
     {
         const uint64_t id = m_head.fetch_add(1, std::memory_order_relaxed);
